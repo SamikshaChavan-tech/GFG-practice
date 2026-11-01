@@ -50,13 +50,14 @@ Therefore, there are two special integers.
 
 **Language:** Java  
 **Runtime:** 0 ms  
-**Memory:** 41.5 MB  
-**Submitted:** 2026-11-01T17:07:54.827Z  
+**Memory:** 42 MB  
+**Submitted:** 2026-11-01T17:08:20.978Z  
 
 ```java
 class Solution {
     public int countSpecialIntegers(int[] nums) {
-        int count=1;
+        if(nums.length==1)return 1;
+        int count=0;
         for(int i=0;i<nums.length-1;i++){
             if(nums[i]==nums[i+1]){
                 count++;
